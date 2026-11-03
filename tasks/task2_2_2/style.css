@@ -1,0 +1,16 @@
+
+p > em {
+  font-size: 3em;
+  font-weight: normal;
+  color: rgb(128, 81, 0);
+}
+
+h1 + p {
+  color: green;
+  text-decoration: none;
+}
+
+ol > li {
+    color: red;
+    text-decoration: green wavy underline;
+}
