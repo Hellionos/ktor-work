@@ -10,13 +10,149 @@
         <title>Task 2.3</title>
     </head>
     <body>
-        <main class="container">
+        <main class="container-fluid">
+            <div class="grid">
+                <div>1, yoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</div>
+                
+                <div>2</div>
+            </div>
             <p>I'm at the top of the world!
                 <h1><a href="https://picocss.com/docs">Trying out this pico stuff</a></h1>
             </p>
             Can I even write stuff directly in main?
-            <form action 
+            <form action="https://httpbin.io/dump/request" method="POST">
+                <p><label for="century">What century is it muffinhead?</label>
+                    <input type="text" id="century" name="century"></p>
+                    <legend>Left or Right?</legend>
+            <ul>
+                <li>
+                    <label for="left">Left</label>
+                    <input type="radio" id="left" name="leftright" value="left" />
+                </li>
+                <li>
+                    <label for="right">Right</label>
+                    <input type="radio" id="right" name="leftright" value="right" />
+                </li>
+            </ul>
+
+                <button class="contrast">Submit</button>
+            </form>
+            <h2>I don't know what else to type</h2>
+            <details name="example" open>
+                <summary>Accordion 1</summary>
+                <p>Garbage in garbage out. Paras </p>
+            </details>
+
+            <hr />
+
+            <details name="example">
+                <summary>Accordion 2</summary>
+                <ul>
+                    <li>I knew kangaroos had mad hops but not 30 feet ones</li>
+                    <li>I'm sure crickets do relatively way better but they can only do that from being so small</li>
+                </ul>
+            </details>
+            <article>
+                <header>Header</header>
+                Now that I've got a little space thanks to these cards here, I can say my peace.
+                <footer>Footer</footer>
+            </article>
+            <!-- Radios -->
+<details class="dropdown">
+  <summary>
+    Select a phase of matter...
+  </summary>
+  <ul>
+    <li>
+      <label>
+        <input type="radio" name="phase" value="solid" />
+        Solid
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="phase" value="liquid" />
+        Liquid
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="phase" value="gas" />
+        Gas
+      </label>
+    </li>
+    <li>
+      <label>
+        <input type="radio" name="phase" value="plasma" />
+        Plasma
+      </label>
+    </li>
+  </ul>
+    </details>
+
+    <!-- Checkboxes -->
+    <details class="dropdown">
+        <summary>
+            Select phases of matter...
+        </summary>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="solid" />
+                    Solid
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="liquid" />
+                    Liquid
+                </label>
+            </li>
+        <li>
+        <label>
+            <input type="checkbox" name="gas" />
+            Gas
+        </label>
+        </li>
+        <li>
+        <label>
+            <input type="checkbox" name="plasma" />
+            Plasma
+        </label>
+        </li>
+    </ul>
+    </details>
+    <form role="search">
+        <input name="search" type="search" placeholder="Search something up when you want to know something" />
+        <input type="submit" value="Search" />
+    </form>
+    <nav>
+        <ul>
+            <li><strong>Acme Corp</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#" class="contrast">About</a></li>
+            <li><a href="#" class="contrast">Services</a></li>
+            <li><a href="#" class="contrast">Products</a></li>
+        </ul>
+    </nav>
         </main>
-        <button>Submit</button>
+        <table>
+            <tr>
+                <th>Musician/s</th>
+                <th>Best Album</th>
+                <th>Best Song</th>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/The_Beatles" classs="contrast">The Beatles</a></td>
+                <td>The White Album</td>
+                <td>Yesterday</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/Billy_Joel" class="secondary">Billy Joel</a></td>
+                <td>Glass Houses</td>
+                <td>Piano Man</td>
+            </tr>
+        </table>
     </body>
 </html>
