@@ -25,7 +25,9 @@ class ApplicationTest : FreeSpec({
         testApplication {
             configure()
             val body = client.get("/").bodyAsText()
-            body shouldContain "<title>My Document</title>"
+            val titles = Jsoup.parse(body).select("head > title")
+            titles shouldHaveSize 1
+            titles[0].text() shouldBe "My Document"
         }
     }
 })
