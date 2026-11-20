@@ -16,13 +16,19 @@ val RoutingCall.uri get() = request.path() + "?" + request.queryString()
 fun Application.configureRouting() {
     routing {
         get("/") {
-            call.respondTemplate("form.peb", emptyMap())
+            call.diceFormRoute()
         }
-
         get("/roll") {
-            val roll = DiceRoll(call.numDice, call.dieSides)
-            val context = mapOf("roll" to roll, "reroll_uri" to call.uri)
-            call.respondTemplate("result.peb", context)
+            call.rollResultRoute()
         }
+        
+    }}
+suspend fun RoutingCall.diceFormRoute() {
+    respondTemplate("form.peb", emptyMap())
     }
-}
+suspend fun RoutingCall.rollResultRoute() {
+    val roll = DiceRoll(numDice, dieSides)
+    val context = mapOf("roll" to roll, "reroll_uri" to uri)
+    respondTemplate("result.peb", context)
+    }
+
